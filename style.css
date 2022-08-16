@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --Fonte-principal: #DADFF2;
+    --Fonte-secundaria: #C4EDF7;
+    --Botao: #22236E;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+body {
+    background: linear-gradient(-180deg, #00103F, #00184E);
+
+}
+
+.img-body {
+    background-image: url(backgroundhome.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 320vh;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    text-decoration: none;
+    background-color: var(--Fonte-principal);
+    border-radius: 30px;
+    border: none;
+    font-weight: 400;
+}
+
+.material-symbols-outlined {
+    color: var(--Botao);
+}
+#menu-topo {
+    position: absolute;
+    top: 30px;
+    right: 320px;
+    white-space: nowrap; /* impede que os menus quebrem */
+    color: var(--Fonte-principal);
+}
+
+nav li {
+    display: inline;
+    margin: 30px;
+}
+
+.item-menu1 {
+    color: var(--Fonte-principal);
+    text-decoration: none;
+    font-weight: 300;
+    
+}
+
+nav a:hover {
+    color: var(--Fonte-secundaria);
+    text-decoration:none;
+}
+
+.logo-cabeçalho {
+    width: 5%;
+    margin: 20px 0 0 80px;
+}
+
+.container1 {
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+}
+
+.principal {
+    float: right;
+    margin-right: 10px;
+    display: inline-block;
+    width: 60%;
+    position: relative;
+}
+
+.img-home img {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.secundario {
+    width: 50%;
+    
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 80px;
+    margin-left: 50px;
+    padding-top: 15%;
+    color: var(--Fonte-secundaria);
+}
+
+.title span {
+    --total: calc(var(--duration) + var(--delay));
+    position: relative;
+    display: block;
+    color: transparent;
+    overflow: hidden;
+    animation: revealText 3s var(--total) forwards;
+}
+
+.title span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--Fonte-secundaria);
+    animation:  rollIn var(--duration) var(--delay) forwards, rollOut var(--duration) var(--total) forwards; 
+}
+
+.title span:nth-child(2)::after {
+    border-top: 3px solid var(--Botao);
+}
+
+@keyframes revealText {
+    to {
+        color: var(--Fonte-secundaria);
+    }
+}
+
+@keyframes rollIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rollOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(105%);
+    }
+}
+
+.texto-topo {
+    padding: 2em 0 3em 0;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 50px;
+    margin-right: 80px;
+    color: var(--Fonte-principal);
+}
+
+.botao-contato {
+    margin-left: 30px;
+    font-size: 25px;
+    color: var(--Botao);
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.botao-contato:hover {
+    color: var(--Fonte-secundaria);
+    background-color: var(--Botao);
+}
+
+.botao-contato1 a {
+    transition: 1s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, .5);
+    background-color: var(--Fonte-secundaria);
+}
+
+.social-menu ul {
+    position:relative;
+    display: flex;
+}
+
+.social-menu ul li {
+    list-style: none;
+    margin-left: 50px;
+    padding-top: 4em;
+}
+
+.social-menu ul li .fab {
+    font-size: 40px;
+    line-height: 60px;
+    transition: .3s;
+    color: var(--Botao);
+}
+
+.social-menu ul li .fab:hover {
+    color: var(--Fonte-secundaria);
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--Fonte-secundaria);
+    text-align: center;
+    transition: 2s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, .5);
+}
+
+.social-menu ul li a:hover {
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: var(--Botao);
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: var(--Botao);
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: var(--Botao);
+}
+
+hr {
+    border:none;
+    border-top:2px dashed var(--Fonte-secundaria);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 3em;
+    
+  }
+
+  .container2 {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    
+  }
+
+  .mini-logo {
+    width: 15%;
+    margin-left: 43%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .texto1 {
+    vertical-align: middle;
+    text-align: center;
+    color: var(--Fonte-principal);
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  h3 {
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: var(--Fonte-secundaria);
+  }
+
+  .box3 {
+    text-align: right;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  h4 {
+    color: var(--Fonte-secundaria);
+    margin-top: 35%;
+    margin-right: 35%;
+    margin-bottom: 30px;
+    font-size: 30px;
+ }
+
+ .box-rodape {
+    background-color: var(--Fonte-principal);
+    margin-left: 15%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    border-radius: 20px;
+    width: 940px;
+    padding: 40px;
+ }
+
+ .box-img {
+    display: flex;
+    margin-bottom: 50px;
+ }
+
+ .logo-rodape {
+    width: 40%;
+    margin-right: 20px;
+ }
+
+ .logo-rodape2 {
+    width: 40%;
+    margin-left: 30px;
+ }
+
+ .texto-rodape {
+    margin-left: 15px;
+    margin-top: 0px;
+    color: var(--Botao);
+ }
+
+ .box-texto{
+    display: flex;
+ }
+ .botao-contato2 {
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 20px;
+    color: var(--Fonte-principal);
+    background: var(--Botao);
+    padding: 25px 40px;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+
+#menu-rodape {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    justify-content: center;
+    display: flex;
+    color: var(--Botao);
+}
+
+.box-rodape1 {
+    background: var(--Fonte-principal);
+}
+
+.menu-rodape {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-bottom: 70px;
+    
+}
+
+.texto-rodape1 {
+    margin-left: 50px;
+    color: var(--Botao);
+}
+
+.texto-rodape2 {
+    text-align: right;
+    margin-right: 50px;
+    color: var(--Botao);
+}
+
+.item-menu2 {
+    color:var(--Botao);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* STYLE CONTATO */
+
+.img-body-contato {
+    background-image:url(backgroundcontato.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h5 {
+    display: inline;
+    text-align: center;
+    font-size: 50px;
+    float: center;
+}
+.title-contato span {
+    --total: calc(var(--duration) + var(--delay));
+    position: relative;
+    display: block;
+    margin-left: 35%;
+    margin-right: 40%;
+    color: transparent;
+    overflow: hidden;
+    animation: revealText 3s var(--total) forwards;
+}
+
+.title-contato span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--Fonte-secundaria);
+    animation:  rollIn var(--duration) var(--delay) forwards, rollOut var(--duration) var(--total) forwards; 
+}
+
+.title-contato span:nth-child(2)::after {
+    border-top: 3px solid var(--Botao);
+}
+
+@keyframes revealText {
+    to {
+        color: var(--Fonte-secundaria);
+    }
+}
+
+@keyframes rollIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rollOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(105%);
+    }
+}
+
+form {
+    margin-left: 30%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.enviar {
+    width: 30%;
+    padding: 15px 0;
+    background: var(--Fonte-secundaria);
+    color: var(--Botao);
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.enviar:hover {
+    background: var(--Botao);
+    color: var(--Fonte-secundaria);
+}
+
+.texto-formulario {
+    color: var(--Fonte-principal);
+    margin-top: 10px;
+}
+
+.container-menu {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
